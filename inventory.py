@@ -1,13 +1,12 @@
 import pandas
 from pandas import DataFrame
 from pandas import Series
-stock = {}
 
+
+stock = {}
 already_ate =  []
 food_record = []
 
-#food = input("What food was eaten : ")
-#person = input("Who ate the food? ")
 
 def menu():
 	print("\n")
@@ -17,8 +16,8 @@ def menu():
 	print("press 4: To check the coustomers who ate food")
 	print("press q: To quit the program")
 	print("\n")
+	print("\n")
 	
-
 
 def add_stock():
 	while True:
@@ -40,11 +39,6 @@ def add_stock():
 				stock[add_stock] = new_amount
 		except (ValueError, TypeError) as err:
 			print('---------------Enter valid amount--------------')
-
-
-	
-	
-	
 
 
 def check_stock():
@@ -87,13 +81,9 @@ def enter_purchase():
 			print("\n{} are out of stocks".format(food))
 
 
-
-
 def coustomers():
 	coustomers = Series(already_ate)
 	print(coustomers)
-
-
 
 
 while True:
